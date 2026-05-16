@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cg8epa0ruwdsc"]
+
+[ext_resource type="Script" uid="uid://bqqq3yw7ldbj4" path="res://Scripts/Entity.gd" id="1_hsfu5"]
+
+[node name="Entity" type="CharacterBody2D" unique_id=1117742302]
+script = ExtResource("1_hsfu5")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1848830272]
+
+[node name="Physics Shape" type="CollisionShape2D" parent="." unique_id=35956170]
+disabled = true
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1253633465]
+
+[node name="Hitbox Shape" type="CollisionShape2D" parent="Hitbox" unique_id=1057562953]
