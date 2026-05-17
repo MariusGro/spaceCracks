@@ -4,10 +4,11 @@ class_name Laser
 
 var speed: int = 500
 
-func setup(pos: Vector2, direction: Vector2, sp: int, allegiance: String) -> void:
+func setup(pos: Vector2, direction: Vector2, sp: int, group: String, sprite: Texture2D) -> void:
 	self.position = pos
 	self.speed = sp
-	self.add_to_group(allegiance)
+	self.add_to_group(group)
+	$Sprite.texture = sprite
 	self.velocity = Vector2(direction.x * speed, direction.y * speed)
 
 func _physics_process(_delta: float) -> void:

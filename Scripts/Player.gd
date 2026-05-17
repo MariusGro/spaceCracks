@@ -10,6 +10,7 @@ const PROJECTILE: PackedScene = preload("res://Scenes/laser.tscn")
 const PROJECTILE_ALLEGIANCE: String = "Player_projectile"
 const PROJECTILE_DIRECTION: Vector2 = Vector2(0.0, -1.0)
 const PROJECTILE_SPEED: int = 500
+const LASER_RED_PARTICLE = preload("uid://d3c2oinumpdh0")
 
 @onready var fire_cooldown: Timer = $"Fire Cooldown"
 @onready var health_bar: HealthBar = $"Health Bar"
@@ -44,7 +45,7 @@ func updateHealthBar() -> void:
 
 func fire() -> void:
 	var laser = PROJECTILE.instantiate() as Laser
-	laser.setup(position, PROJECTILE_DIRECTION, PROJECTILE_SPEED, PROJECTILE_ALLEGIANCE)
+	laser.setup(position, PROJECTILE_DIRECTION, PROJECTILE_SPEED, PROJECTILE_ALLEGIANCE, LASER_RED_PARTICLE)
 	get_parent().add_child(laser)
 
 func _on_hitbox_area_entered(area: Area2D) -> void:

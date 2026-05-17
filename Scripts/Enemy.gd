@@ -41,9 +41,9 @@ func fire() -> void:
 		Vector2(position.x, position.y + PROJECTILE_Y_ALIGNMENT),
 		PROJECTILE_DIRECTION,
 		PROJECTILE_SPEED,
-		PROJECTILE_ALLEGIANCE
+		PROJECTILE_ALLEGIANCE,
+		LASER_GREEN_PARTICLE
 	)
-	laser.setSprite(LASER_GREEN_PARTICLE)
 	get_parent().add_child(laser)
 
 # Clanker code
