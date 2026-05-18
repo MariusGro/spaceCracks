@@ -1,11 +1,11 @@
-# spaceCracks
+# spaceCracks 🚀💫⭐
 A simple space shooter pixel art game made with the godot engine.
 
 ### About this project
 - This is supposed to be a small project to practice not only my game development skills but also how to properly use git / github for version control.
 - Everything in this project is made by me, except for maybe some clanker code. However all assets are entirely handdrawn in aseprite.
 - This game is not supposed to be very original or be that big in scope. This is more a preparation for possible bigger future projects... (you gotta start somewhere)
-- Feel free to use everything in this project for your personal purposes.
+- Feel free to use everything in this project for whatever purposes.
 
 ### About this game
 This game is a simple space shooter with a pixel-artstyle. My goal for this project is less originality and more about making a complete game with a high level of polish.
@@ -26,7 +26,7 @@ Feel free to give feedback and no need to hold back.
 ### Roadmap
 Here are the features I plan to add in order.
 - [X] Create version control
-- [] Discuss wether Player and Enemy should share an additional parent-class or if this is just form over function
+- [X] Discuss wether Player and Enemy should share an additional parent-class or if this is just form over function
 - [] Create a main menu
 - [] Create a pause menu
 - [] Create a game-over-screen
