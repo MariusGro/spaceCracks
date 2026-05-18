@@ -140,7 +140,6 @@ autoplay = "default"
 frame_progress = 0.22742034
 
 [node name="Player" parent="." unique_id=1117742302 instance=ExtResource("2_pu3va")]
-damage_color = Color(1, 1, 1, 1)
 
 [node name="Camera" type="Camera2D" parent="Player" unique_id=1210366096]
 position = Vector2(0, -50)
@@ -155,13 +154,10 @@ script = ExtResource("4_mgc0q")
 
 [node name="Enemy" parent="." unique_id=714749905 instance=ExtResource("5_mgc0q")]
 position = Vector2(-59, -61)
-damage_color = Color(1, 1, 1, 1)
 
 [node name="Enemy2" parent="." unique_id=1091747710 instance=ExtResource("5_mgc0q")]
 position = Vector2(73, -39)
-damage_color = Color(1, 1, 1, 1)
 
 [node name="Enemy3" parent="." unique_id=1337512593 instance=ExtResource("5_mgc0q")]
 position = Vector2(19, -79)
 max_health = 50
-damage_color = Color(1, 1, 1, 1)
