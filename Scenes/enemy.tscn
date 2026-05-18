@@ -1,33 +1,41 @@
-[gd_scene format=3 uid="uid://dqnxkg8yatagq"]
+[gd_scene format=3 uid="uid://b52bwnoheqr0o"]
 
-[ext_resource type="PackedScene" uid="uid://cg8epa0ruwdsc" path="res://Scenes/entity.tscn" id="1_1f0kj"]
-[ext_resource type="Script" uid="uid://daaf6lqggptdo" path="res://Scripts/Enemy.gd" id="2_287tu"]
-[ext_resource type="Texture2D" uid="uid://4ew4ow58yqgj" path="res://Art/enemy.png" id="2_afpow"]
-[ext_resource type="PackedScene" uid="uid://cwgsipactuh2q" path="res://Scenes/health_bar.tscn" id="4_287tu"]
+[ext_resource type="PackedScene" uid="uid://075a72iqy3ag" path="res://Scenes/spaceship.tscn" id="1_1f0kj"]
+[ext_resource type="Script" uid="uid://b6f1pjkf0ebuq" path="res://Scripts/enemy.gd" id="2_afpow"]
+[ext_resource type="Texture2D" uid="uid://bnoglvimt7psx" path="res://Art/laser_green_particle.png" id="3_287tu"]
+[ext_resource type="Texture2D" uid="uid://4ew4ow58yqgj" path="res://Art/enemy.png" id="4_0830c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghaa6"]
 size = Vector2(16, 11)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0830c"]
-size = Vector2(22, 19)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dp5w"]
+size = Vector2(16, 11)
 
 [node name="Enemy" unique_id=1117742302 groups=["Enemy"] instance=ExtResource("1_1f0kj")]
-z_index = 1
-script = ExtResource("2_287tu")
+script = ExtResource("2_afpow")
+projectile_sprite = ExtResource("3_287tu")
+projectile_group = "Enemy_projectile"
+projectile_y_correction = 11
+projectile_direction = Vector2(0, 1)
+damage_color = Color(3.169914, 3.2944162, 3.0080616, 1)
+harmful_groups = Dictionary[String, int]({
+"Player_projectile": 1
+})
 
 [node name="Sprite" parent="." index="0" unique_id=1848830272]
-texture = ExtResource("2_afpow")
+texture = ExtResource("4_0830c")
 
 [node name="Physics Shape" parent="." index="1" unique_id=35956170]
 position = Vector2(0, 1.5)
-shape = SubResource("RectangleShape2D_287tu")
+shape = SubResource("RectangleShape2D_ghaa6")
 
 [node name="Hitbox Shape" parent="Hitbox" parent_id_path=PackedInt32Array(1253633465) index="0" unique_id=1057562953]
-position = Vector2(0, -2.5)
-shape = SubResource("RectangleShape2D_0830c")
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_1dp5w")
 
-[node name="Health Bar" parent="." index="3" unique_id=1530227510 instance=ExtResource("4_287tu")]
+[node name="Health Bar" parent="." index="3" unique_id=1530227510]
 offset_top = -32.0
 offset_bottom = 0.0
 
-[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[node name="Fire Cooldown" parent="." index="4" unique_id=71517273]
+wait_time = 2.0

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://075a72iqy3ag"]
+
+[ext_resource type="PackedScene" uid="uid://cg8epa0ruwdsc" path="res://Scenes/entity.tscn" id="1_5ajj3"]
+[ext_resource type="Script" uid="uid://cdrjaxlgpkg8b" path="res://Scripts/spaceship.gd" id="2_1hcmv"]
+[ext_resource type="Texture2D" uid="uid://dsp7mh3ehod3a" path="res://Art/laser_empty_particle.png" id="3_iohgh"]
+[ext_resource type="PackedScene" uid="uid://cwgsipactuh2q" path="res://Scenes/health_bar.tscn" id="4_iohgh"]
+
+[node name="Spaceship" unique_id=1117742302 instance=ExtResource("1_5ajj3")]
+z_index = 1
+script = ExtResource("2_1hcmv")
+max_health = 10
+projectile_speed = 50
+projectile_sprite = ExtResource("3_iohgh")
+projectile_group = "None"
+projectile_x_correction = 0
+projectile_y_correction = 0
+projectile_direction = Vector2(0, 0)
+harmful_groups = Dictionary[String, int]({})
+
+[node name="Health Bar" parent="." index="3" unique_id=1530227510 instance=ExtResource("4_iohgh")]
+offset_top = 0.0
+offset_bottom = 32.0
+
+[node name="Fire Cooldown" type="Timer" parent="." index="4" unique_id=71517273]
+one_shot = true
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cel7ox8tmu8cq"]
 
 [ext_resource type="PackedScene" uid="uid://cg8epa0ruwdsc" path="res://Scenes/entity.tscn" id="1_mou6w"]
-[ext_resource type="Texture2D" uid="uid://d3c2oinumpdh0" path="res://Art/laser_red_particle.png" id="2_3pc01"]
 [ext_resource type="Script" uid="uid://61kwl5vr0wph" path="res://Scripts/Laser.gd" id="2_c8ure"]
+[ext_resource type="Texture2D" uid="uid://dsp7mh3ehod3a" path="res://Art/laser_empty_particle.png" id="3_3pc01"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ure"]
 size = Vector2(4, 8)
@@ -10,11 +10,11 @@ size = Vector2(4, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krwe7"]
 size = Vector2(4, 8)
 
-[node name="Laser" unique_id=1117742302 instance=ExtResource("1_mou6w")]
+[node name="Laser" unique_id=1117742302 groups=["Projectile"] instance=ExtResource("1_mou6w")]
 script = ExtResource("2_c8ure")
 
 [node name="Sprite" parent="." index="0" unique_id=1848830272]
-texture = ExtResource("2_3pc01")
+texture = ExtResource("3_3pc01")
 
 [node name="Physics Shape" parent="." index="1" unique_id=35956170]
 shape = SubResource("RectangleShape2D_c8ure")
