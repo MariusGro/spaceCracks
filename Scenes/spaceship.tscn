@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cwgsipactuh2q" path="res://Scenes/health_bar.tscn" id="4_iohgh"]
 
 [node name="Spaceship" unique_id=1117742302 instance=ExtResource("1_5ajj3")]
+z_index = 1
 script = ExtResource("2_1hcmv")
 max_health = 10
 projectile_speed = 50

@@ -11,6 +11,7 @@ const PROJECTILE: PackedScene = preload("res://Scenes/laser.tscn")
 @export var projectile_x_correction: int = 0
 @export var projectile_y_correction: int = 0
 @export var projectile_direction: Vector2 = Vector2.ZERO
+@export var damage_color: Color = Color.WHITE
 @export var harmful_groups: Dictionary[String, int] = {}
 
 @onready var health_bar: HealthBar = $"Health Bar"
@@ -19,7 +20,7 @@ const PROJECTILE: PackedScene = preload("res://Scenes/laser.tscn")
 var health: int = 1
 
 
-func _init() -> void:
+func _ready() -> void:
 	health = max_health
 
 
@@ -35,13 +36,13 @@ func _physics_process(delta: float) -> void:
 
 ## Is called by the default [method Node._process]-method.
 ## Used to add content from inheriting classes to the main-loop.
-func custom_process(delta: float) -> void:
+func custom_process(_delta: float) -> void:
 	pass
 
 
 ## Is called by the default [method Node._physics_process]-method
 ## Used to add content from inheriting classes to the main-physics-loop.
-func custom_physics_process(delta: float) -> void:
+func custom_physics_process(_delta: float) -> void:
 	pass
 
 
@@ -69,10 +70,12 @@ func fire() -> void:
 		projectile_sprite
 	)
 	get_parent().add_child(laser)
+	
+	fire_cooldown.start()
 
 
 ## Clanker code
-func flash_red(times: int, flash_time: float) -> void:
+func flash(times: int, flash_time: float, color: Color) -> void:
 	var tween = create_tween()
 	tween.set_parallel(false)
 	
@@ -80,7 +83,7 @@ func flash_red(times: int, flash_time: float) -> void:
 		tween.tween_property(
 			$Sprite,
 			"modulate",
-			Color("e64539"),
+			color,
 			flash_time
 		)
 		tween.tween_property(
@@ -93,12 +96,16 @@ func flash_red(times: int, flash_time: float) -> void:
 
 ## Called automatically when the [Spaceship] loses health inside of the
 ## [method Spaceship._on_hitbox_area_entered]-method.
-func custom_damage_behavior() -> void:
-	pass
+func custom_damage_behavior(_damage: int) -> void:
+		pass
 
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	for damage_type: String in harmful_groups.keys():
 		if area.get_parent().is_in_group(damage_type):
-			health -= harmful_groups[damage_type]
-			custom_damage_behavior()
+			if area.get_parent().is_in_group("Projectile"):
+				area.get_parent().queue_free()
+			var damage: int = harmful_groups[damage_type]
+			health -= damage
+			flash(damage, 0.05, damage_color)
+			custom_damage_behavior(damage)

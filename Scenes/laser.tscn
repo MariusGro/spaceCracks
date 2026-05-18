@@ -10,7 +10,7 @@ size = Vector2(4, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krwe7"]
 size = Vector2(4, 8)
 
-[node name="Laser" unique_id=1117742302 instance=ExtResource("1_mou6w")]
+[node name="Laser" unique_id=1117742302 groups=["Projectile"] instance=ExtResource("1_mou6w")]
 script = ExtResource("2_c8ure")
 
 [node name="Sprite" parent="." index="0" unique_id=1848830272]

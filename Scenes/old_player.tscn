@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bbigrprkug1pw"]
+
+[ext_resource type="PackedScene" uid="uid://cg8epa0ruwdsc" path="res://Scenes/entity.tscn" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://bld114qldask0" path="res://Art/spaceship.png" id="2_6t5aa"]
+[ext_resource type="Script" uid="uid://cefd2wexg06rp" path="res://Scripts/OldPlayer.gd" id="2_vgqql"]
+[ext_resource type="PackedScene" uid="uid://cwgsipactuh2q" path="res://Scenes/health_bar.tscn" id="4_fkybt"]
+[ext_resource type="Texture2D" uid="uid://dn13o1yb38lme" path="res://Art/UI/fill_green.png" id="5_x3wgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
+size = Vector2(8, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
+size = Vector2(8, 18)
+
+[node name="Player" unique_id=1117742302 instance=ExtResource("1_v0iea")]
+z_index = 1
+script = ExtResource("2_vgqql")
+
+[node name="Sprite" parent="." index="0" unique_id=1848830272]
+texture = ExtResource("2_6t5aa")
+
+[node name="Physics Shape" parent="." index="1" unique_id=35956170]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_cvnsp")
+
+[node name="Hitbox Shape" parent="Hitbox" parent_id_path=PackedInt32Array(1253633465) index="0" unique_id=1057562953]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_6t5aa")
+
+[node name="Fire Cooldown" type="Timer" parent="." index="3" unique_id=1574595806]
+wait_time = 0.2
+one_shot = true
+
+[node name="Health Bar" parent="." index="4" unique_id=1530227510 instance=ExtResource("4_fkybt")]
+offset_top = 4.0
+offset_bottom = 36.0
+texture_progress = ExtResource("5_x3wgy")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

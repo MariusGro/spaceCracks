@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b1m6nx3lp8rf"]
 
 [ext_resource type="Shader" uid="uid://brtdr6n0oodiq" path="res://Shaders/Scroll.gdshader" id="1_0e3vx"]
-[ext_resource type="PackedScene" uid="uid://dqnxkg8yatagq" path="res://Scenes/enemy.tscn" id="2_0e3vx"]
 [ext_resource type="Texture2D" uid="uid://dounsi4xc354l" path="res://Art/Space_background-Sheet.png" id="2_6j5ir"]
-[ext_resource type="PackedScene" uid="uid://bbigrprkug1pw" path="res://Scenes/player.tscn" id="2_pu3va"]
+[ext_resource type="PackedScene" uid="uid://m6uhnnw2r8q6" path="res://Scenes/player.tscn" id="2_pu3va"]
 [ext_resource type="Script" uid="uid://dllh6fqac8nxu" path="res://Scripts/Camera.gd" id="4_mgc0q"]
+[ext_resource type="PackedScene" uid="uid://b52bwnoheqr0o" path="res://Scenes/enemy.tscn" id="5_mgc0q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mgc0q"]
 shader = ExtResource("1_0e3vx")
@@ -140,9 +140,10 @@ autoplay = "default"
 frame_progress = 0.22742034
 
 [node name="Player" parent="." unique_id=1117742302 instance=ExtResource("2_pu3va")]
+damage_color = Color(1, 1, 1, 1)
 
 [node name="Camera" type="Camera2D" parent="Player" unique_id=1210366096]
-offset = Vector2(0, -50)
+position = Vector2(0, -50)
 zoom = Vector2(4, 4)
 limit_left = -256
 limit_top = -256
@@ -152,11 +153,15 @@ position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 script = ExtResource("4_mgc0q")
 
-[node name="Enemy" parent="." unique_id=344905373 instance=ExtResource("2_0e3vx")]
-position = Vector2(0, -100)
+[node name="Enemy" parent="." unique_id=714749905 instance=ExtResource("5_mgc0q")]
+position = Vector2(-59, -61)
+damage_color = Color(1, 1, 1, 1)
 
-[node name="Enemy2" parent="." unique_id=594055138 instance=ExtResource("2_0e3vx")]
-position = Vector2(72, -86)
+[node name="Enemy2" parent="." unique_id=1091747710 instance=ExtResource("5_mgc0q")]
+position = Vector2(73, -39)
+damage_color = Color(1, 1, 1, 1)
 
-[node name="Enemy3" parent="." unique_id=683999580 instance=ExtResource("2_0e3vx")]
-position = Vector2(-97, -62)
+[node name="Enemy3" parent="." unique_id=1337512593 instance=ExtResource("5_mgc0q")]
+position = Vector2(19, -79)
+max_health = 50
+damage_color = Color(1, 1, 1, 1)
