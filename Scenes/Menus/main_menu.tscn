@@ -1,5 +1,23 @@
 [gd_scene format=3 uid="uid://ci0ujjnox6n8q"]
 
+[ext_resource type="Texture2D" uid="uid://cg0g7hmsv7w33" path="res://Art/UI/MenuButtons/Start_normal.png" id="1_s0gno"]
+[ext_resource type="Texture2D" uid="uid://bgp3lcbjpnv3i" path="res://Art/UI/MenuButtons/Start_pressed.png" id="2_8bdjp"]
+[ext_resource type="Texture2D" uid="uid://duhsfcqmo2i2f" path="res://Art/UI/MenuButtons/Start_hover.png" id="3_fx838"]
+[ext_resource type="Texture2D" uid="uid://bgtv1ha4w1oqm" path="res://Art/UI/MenuButtons/Start_disabled.png" id="4_0rh2w"]
+[ext_resource type="Texture2D" uid="uid://ct6o42t64tshn" path="res://Art/UI/MenuButtons/focused.png" id="5_ou7d0"]
+[ext_resource type="Texture2D" uid="uid://ct6wyn10fjpet" path="res://Art/UI/MenuButtons/Options_normal.png" id="6_47bqg"]
+[ext_resource type="Texture2D" uid="uid://ioehj1pmi6ub" path="res://Art/UI/MenuButtons/Options_pressed.png" id="7_cflx4"]
+[ext_resource type="Texture2D" uid="uid://c1l686d2jsfyu" path="res://Art/UI/MenuButtons/Options_hover.png" id="8_hg3ot"]
+[ext_resource type="Texture2D" uid="uid://b3c33532fuujh" path="res://Art/UI/MenuButtons/Options_disabled.png" id="9_h56lv"]
+[ext_resource type="Texture2D" uid="uid://gdcbttqnae8l" path="res://Art/UI/MenuButtons/Credits_normal.png" id="10_e57l0"]
+[ext_resource type="Texture2D" uid="uid://chveci3bpuc4a" path="res://Art/UI/MenuButtons/Credits_pressed.png" id="11_bwyy1"]
+[ext_resource type="Texture2D" uid="uid://dfu2ijxu1rts8" path="res://Art/UI/MenuButtons/Credits_hover.png" id="12_ef2r8"]
+[ext_resource type="Texture2D" uid="uid://cxa5qvvxruqwh" path="res://Art/UI/MenuButtons/Credits_disabled.png" id="13_1ih0d"]
+[ext_resource type="Texture2D" uid="uid://ionlpt2s6vnk" path="res://Art/UI/MenuButtons/Exit_normal.png" id="14_m71hm"]
+[ext_resource type="Texture2D" uid="uid://dgb0kmk37ygul" path="res://Art/UI/MenuButtons/Exit_pressed.png" id="15_8ldpj"]
+[ext_resource type="Texture2D" uid="uid://dfua2wsiguyjx" path="res://Art/UI/MenuButtons/Exit_hover.png" id="16_4ttci"]
+[ext_resource type="Texture2D" uid="uid://cf8v5fp8vb7da" path="res://Art/UI/MenuButtons/Exit_disabled.png" id="17_2v6gi"]
+
 [node name="MainMenu" type="Control" unique_id=2116818785]
 layout_mode = 3
 anchors_preset = 15
@@ -21,42 +39,51 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 128
 text = "spaceCracks"
 
-[node name="VBoxMenuButtons" type="VBoxContainer" parent="." unique_id=257582601]
+[node name="Menu Buttons" type="VBoxContainer" parent="." unique_id=759045293]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -71.0
-offset_top = -78.0
-offset_right = 71.0
-offset_bottom = 182.0
+offset_left = -24.0
+offset_top = 50.0
+offset_right = 24.0
+offset_bottom = 126.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 16
-alignment = 1
+scale = Vector2(4, 4)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/separation = 8
 
-[node name="Start" type="Button" parent="VBoxMenuButtons" unique_id=2040515605]
+[node name="Start" type="TextureButton" parent="Menu Buttons" unique_id=1296429753]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
-text = "start"
+texture_normal = ExtResource("1_s0gno")
+texture_pressed = ExtResource("2_8bdjp")
+texture_hover = ExtResource("3_fx838")
+texture_disabled = ExtResource("4_0rh2w")
+texture_focused = ExtResource("5_ou7d0")
 
-[node name="Options" type="Button" parent="VBoxMenuButtons" unique_id=851817813]
+[node name="Options" type="TextureButton" parent="Menu Buttons" unique_id=1322233231]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
-text = "options"
+texture_normal = ExtResource("6_47bqg")
+texture_pressed = ExtResource("7_cflx4")
+texture_hover = ExtResource("8_hg3ot")
+texture_disabled = ExtResource("9_h56lv")
+texture_focused = ExtResource("5_ou7d0")
 
-[node name="Credits" type="Button" parent="VBoxMenuButtons" unique_id=776171420]
+[node name="Credits" type="TextureButton" parent="Menu Buttons" unique_id=1770898288]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
-text = "credits"
+texture_normal = ExtResource("10_e57l0")
+texture_pressed = ExtResource("11_bwyy1")
+texture_hover = ExtResource("12_ef2r8")
+texture_disabled = ExtResource("13_1ih0d")
+texture_focused = ExtResource("5_ou7d0")
 
-[node name="Exit" type="Button" parent="VBoxMenuButtons" unique_id=1606453926]
+[node name="Exit" type="TextureButton" parent="Menu Buttons" unique_id=686808399]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
-text = "exit"
+texture_normal = ExtResource("14_m71hm")
+texture_pressed = ExtResource("15_8ldpj")
+texture_hover = ExtResource("16_4ttci")
+texture_disabled = ExtResource("17_2v6gi")
+texture_focused = ExtResource("5_ou7d0")
