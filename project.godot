@@ -99,4 +99,4 @@ fire={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-environment/defaults/default_clear_color=Color(0.2509804, 0.28627452, 0.4509804, 1)
+environment/defaults/default_clear_color=Color(0.00093636644, 0.00093636644, 0.00093636644, 1)

@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://ci0ujjnox6n8q"]
 
+[ext_resource type="Shader" uid="uid://dpoftjb7c5wly" path="res://Shaders/code_scroll.gdshader" id="1_0rh2w"]
+[ext_resource type="Texture2D" uid="uid://dtyjm4mj1uqf0" path="res://Art/UI/code_background.png" id="1_fx838"]
 [ext_resource type="Texture2D" uid="uid://cg0g7hmsv7w33" path="res://Art/UI/MenuButtons/Start_normal.png" id="1_s0gno"]
 [ext_resource type="Texture2D" uid="uid://bgp3lcbjpnv3i" path="res://Art/UI/MenuButtons/Start_pressed.png" id="2_8bdjp"]
 [ext_resource type="Texture2D" uid="uid://dgo4p3tfx1y7h" path="res://Art/UI/spaceCracks_title_spritesheet.png" id="2_fx838"]
 [ext_resource type="Texture2D" uid="uid://duhsfcqmo2i2f" path="res://Art/UI/MenuButtons/Start_hover.png" id="3_fx838"]
+[ext_resource type="Texture2D" uid="uid://caebe73dfpjs0" path="res://Art/UI/cracks_background.png" id="3_ou7d0"]
 [ext_resource type="Texture2D" uid="uid://bgtv1ha4w1oqm" path="res://Art/UI/MenuButtons/Start_disabled.png" id="4_0rh2w"]
 [ext_resource type="Texture2D" uid="uid://ct6o42t64tshn" path="res://Art/UI/MenuButtons/focused.png" id="5_ou7d0"]
 [ext_resource type="Texture2D" uid="uid://ct6wyn10fjpet" path="res://Art/UI/MenuButtons/Options_normal.png" id="6_47bqg"]
@@ -19,7 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://dfua2wsiguyjx" path="res://Art/UI/MenuButtons/Exit_hover.png" id="16_4ttci"]
 [ext_resource type="Texture2D" uid="uid://cf8v5fp8vb7da" path="res://Art/UI/MenuButtons/Exit_disabled.png" id="17_2v6gi"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8bdjp"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ou7d0"]
+shader = ExtResource("1_0rh2w")
+shader_parameter/speed = 0.01
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0rh2w"]
 atlas = ExtResource("2_fx838")
@@ -121,14 +126,30 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="." unique_id=1281714107]
+[node name="Cool Code" type="TextureRect" parent="." unique_id=1281714107]
+modulate = Color(0.12435684, 0.12435684, 0.12435684, 1)
+material = SubResource("ShaderMaterial_ou7d0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 472.0
+offset_bottom = 472.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture = ExtResource("1_fx838")
+stretch_mode = 1
+
+[node name="Space Ckracks" type="TextureRect" parent="." unique_id=692484999]
+modulate = Color(0.69099766, 0.69099766, 0.69099766, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("PlaceholderTexture2D_8bdjp")
+texture = ExtResource("3_ou7d0")
 
 [node name="Title" type="Control" parent="." unique_id=1197471253]
 custom_minimum_size = Vector2(224, 48)
