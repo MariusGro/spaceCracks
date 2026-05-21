@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cg0g7hmsv7w33" path="res://Art/UI/MenuButtons/Start_normal.png" id="1_s0gno"]
 [ext_resource type="Texture2D" uid="uid://bgp3lcbjpnv3i" path="res://Art/UI/MenuButtons/Start_pressed.png" id="2_8bdjp"]
+[ext_resource type="Texture2D" uid="uid://dgo4p3tfx1y7h" path="res://Art/UI/spaceCracks_title_spritesheet.png" id="2_fx838"]
 [ext_resource type="Texture2D" uid="uid://duhsfcqmo2i2f" path="res://Art/UI/MenuButtons/Start_hover.png" id="3_fx838"]
 [ext_resource type="Texture2D" uid="uid://bgtv1ha4w1oqm" path="res://Art/UI/MenuButtons/Start_disabled.png" id="4_0rh2w"]
 [ext_resource type="Texture2D" uid="uid://ct6o42t64tshn" path="res://Art/UI/MenuButtons/focused.png" id="5_ou7d0"]
@@ -18,6 +19,100 @@
 [ext_resource type="Texture2D" uid="uid://dfua2wsiguyjx" path="res://Art/UI/MenuButtons/Exit_hover.png" id="16_4ttci"]
 [ext_resource type="Texture2D" uid="uid://cf8v5fp8vb7da" path="res://Art/UI/MenuButtons/Exit_disabled.png" id="17_2v6gi"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8bdjp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rh2w"]
+atlas = ExtResource("2_fx838")
+region = Rect2(0, 0, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou7d0"]
+atlas = ExtResource("2_fx838")
+region = Rect2(224, 0, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47bqg"]
+atlas = ExtResource("2_fx838")
+region = Rect2(448, 0, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cflx4"]
+atlas = ExtResource("2_fx838")
+region = Rect2(672, 0, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg3ot"]
+atlas = ExtResource("2_fx838")
+region = Rect2(0, 48, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h56lv"]
+atlas = ExtResource("2_fx838")
+region = Rect2(224, 48, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e57l0"]
+atlas = ExtResource("2_fx838")
+region = Rect2(448, 48, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwyy1"]
+atlas = ExtResource("2_fx838")
+region = Rect2(672, 48, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef2r8"]
+atlas = ExtResource("2_fx838")
+region = Rect2(0, 96, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ih0d"]
+atlas = ExtResource("2_fx838")
+region = Rect2(224, 96, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m71hm"]
+atlas = ExtResource("2_fx838")
+region = Rect2(448, 96, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ldpj"]
+atlas = ExtResource("2_fx838")
+region = Rect2(672, 96, 224, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ttci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rh2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou7d0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47bqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cflx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg3ot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h56lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e57l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwyy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef2r8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ih0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m71hm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ldpj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="MainMenu" type="Control" unique_id=2116818785]
 layout_mode = 3
 anchors_preset = 15
@@ -26,18 +121,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="." unique_id=728575430]
+[node name="Background" type="TextureRect" parent="." unique_id=1281714107]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_8bdjp")
+
+[node name="Title" type="Control" parent="." unique_id=1197471253]
+custom_minimum_size = Vector2(224, 48)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -48.0
-offset_top = 16.0
-offset_right = 48.0
-offset_bottom = 39.0
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 48.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 128
-text = "spaceCracks"
+scale = Vector2(4, 4)
+pivot_offset_ratio = Vector2(0.5, 0)
+
+[node name="Title Animated Sprite" type="AnimatedSprite2D" parent="Title" unique_id=956719575]
+position = Vector2(112, 24)
+sprite_frames = SubResource("SpriteFrames_4ttci")
+autoplay = "default"
+frame_progress = 0.30363676
 
 [node name="Menu Buttons" type="VBoxContainer" parent="." unique_id=759045293]
 layout_mode = 1
@@ -47,14 +157,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -24.0
-offset_top = 50.0
+offset_top = -6.0
 offset_right = 24.0
-offset_bottom = 126.0
+offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_constants/separation = 8
 
 [node name="Start" type="TextureButton" parent="Menu Buttons" unique_id=1296429753]
 layout_mode = 2
