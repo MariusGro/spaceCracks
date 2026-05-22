@@ -143,7 +143,7 @@ frame_progress = 0.22742034
 
 [node name="Camera" type="Camera2D" parent="Player" unique_id=1210366096]
 position = Vector2(0, -50)
-zoom = Vector2(4, 4)
+zoom = Vector2(3, 3)
 limit_left = -256
 limit_top = -256
 limit_right = 256
