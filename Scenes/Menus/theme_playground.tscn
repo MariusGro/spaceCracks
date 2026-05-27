@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://dx5mv78bdedj5"]
+
+[ext_resource type="Texture2D" uid="uid://clu0lcfjd4u4y" path="res://Art/Themes/Panel_default_theme_texture.png" id="1_iamce"]
+[ext_resource type="FontFile" uid="uid://beyh0g1o1lu6o" path="res://Art/Fonts/hopePlodeNostalg.ttf" id="2_blcns"]
+[ext_resource type="Texture2D" uid="uid://c1agqivcbmplk" path="res://Art/Themes/Button_default_theme_texture.png" id="4_blcns"]
+[ext_resource type="Texture2D" uid="uid://btqgd6ivo2dxe" path="res://Art/Themes/Button_pressed_default_theme.png" id="5_blcns"]
+[ext_resource type="Texture2D" uid="uid://v0ud3xon5bmm" path="res://Art/Themes/Button_hover_default_theme.png" id="5_cftba"]
+[ext_resource type="FontFile" uid="uid://duyx05e1wva85" path="res://Art/Fonts/tasePex2.ttf" id="5_p8qnd"]
+[ext_resource type="Texture2D" uid="uid://cyr2lqev7b5m1" path="res://Art/Themes/Button_focus_default_theme.png" id="7_blcns"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2g2ji"]
+texture = ExtResource("1_iamce")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_flqlx"]
+texture = ExtResource("4_blcns")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hl02e"]
+texture = ExtResource("5_blcns")
+texture_margin_left = 4.0
+texture_margin_top = 11.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8qnd"]
+texture = ExtResource("5_cftba")
+texture_margin_left = 4.0
+texture_margin_top = 7.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uio5m"]
+texture = ExtResource("7_blcns")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="Theme Playground" type="Control" unique_id=627812290]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="Panel" parent="." unique_id=1982696679]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.99997
+offset_top = -90.33334
+offset_right = 71.99997
+offset_bottom = 90.33334
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2g2ji")
+
+[node name="Title" type="Label" parent="Menu" unique_id=1433996825]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 5.0
+offset_bottom = 37.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
+theme_override_fonts/font = ExtResource("2_blcns")
+theme_override_font_sizes/font_size = 32
+text = "Main menu"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu" unique_id=247488715]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 32.99994
+offset_top = -49.0
+offset_right = -32.99994
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Start" type="Button" parent="Menu/VBoxContainer" unique_id=552861952]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12941177, 0.09411765, 0.105882354, 1)
+theme_override_colors/font_focus_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_colors/font_pressed_color = Color(0.3882353, 0.67058825, 0.24705882, 1)
+theme_override_colors/font_hover_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_fonts/font = ExtResource("5_p8qnd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_flqlx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hl02e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p8qnd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uio5m")
+text = "Start"
+
+[node name="Options" type="Button" parent="Menu/VBoxContainer" unique_id=482689002]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12941177, 0.09411765, 0.105882354, 1)
+theme_override_colors/font_focus_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_colors/font_pressed_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+theme_override_colors/font_hover_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_fonts/font = ExtResource("5_p8qnd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_flqlx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hl02e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p8qnd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uio5m")
+text = "Options"
+
+[node name="Credits" type="Button" parent="Menu/VBoxContainer" unique_id=670652689]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12941177, 0.09411765, 0.105882354, 1)
+theme_override_colors/font_focus_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_colors/font_pressed_color = Color(0.8, 0.18431373, 0.48235294, 1)
+theme_override_colors/font_hover_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_fonts/font = ExtResource("5_p8qnd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_flqlx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hl02e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p8qnd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uio5m")
+text = "Credits"
+
+[node name="Exit" type="Button" parent="Menu/VBoxContainer" unique_id=1805606534]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12941177, 0.09411765, 0.105882354, 1)
+theme_override_colors/font_focus_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_colors/font_pressed_color = Color(0.9019608, 0.27058825, 0.22352941, 1)
+theme_override_colors/font_hover_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_fonts/font = ExtResource("5_p8qnd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_flqlx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hl02e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p8qnd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uio5m")
+text = "Exit
+"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=700701990]
+position = Vector2(574, 329)
+zoom = Vector2(3, 3)
