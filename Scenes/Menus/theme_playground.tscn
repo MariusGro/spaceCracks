@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dx5mv78bdedj5"]
 
+[ext_resource type="Texture2D" uid="uid://ccybnsogxu1v2" path="res://Art/Space_background.png" id="1_d1wfq"]
 [ext_resource type="Texture2D" uid="uid://clu0lcfjd4u4y" path="res://Art/Themes/Panel_default_theme_texture.png" id="1_iamce"]
 [ext_resource type="FontFile" uid="uid://beyh0g1o1lu6o" path="res://Art/Fonts/hopePlodeNostalg.ttf" id="2_blcns"]
 [ext_resource type="Texture2D" uid="uid://c1agqivcbmplk" path="res://Art/Themes/Button_default_theme_texture.png" id="4_blcns"]
@@ -7,6 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://v0ud3xon5bmm" path="res://Art/Themes/Button_hover_default_theme.png" id="5_cftba"]
 [ext_resource type="FontFile" uid="uid://duyx05e1wva85" path="res://Art/Fonts/tasePex2.ttf" id="5_p8qnd"]
 [ext_resource type="Texture2D" uid="uid://cyr2lqev7b5m1" path="res://Art/Themes/Button_focus_default_theme.png" id="7_blcns"]
+[ext_resource type="Texture2D" uid="uid://dxivb8k181iby" path="res://Art/Themes/Checkbox_checked_default_theme.png" id="8_uio5m"]
+[ext_resource type="Texture2D" uid="uid://d3e7v0misc33t" path="res://Art/Themes/Checkbox_unchecked_default_theme.png" id="9_flqlx"]
+[ext_resource type="Texture2D" uid="uid://dbdj8ehpgkmux" path="res://Art/Themes/Slider_grabber_default_theme.png" id="10_sk6e2"]
+[ext_resource type="Texture2D" uid="uid://cwan80e4lsx2p" path="res://Art/Themes/Slider_grabber_highlighted_default_theme.png" id="11_jewqu"]
+[ext_resource type="Texture2D" uid="uid://cxlpseo3xprvl" path="res://Art/Themes/Slider_area_default_theme.png" id="12_jewqu"]
+[ext_resource type="Texture2D" uid="uid://dcvr5chpyla4g" path="res://Art/Themes/Slider_area_grabber_default_theme.png" id="13_2gvgk"]
+[ext_resource type="Texture2D" uid="uid://pacg47rs565r" path="res://Art/Themes/Slider_area_grabber_highlighted_default_theme.png" id="14_i22yq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2g2ji"]
 texture = ExtResource("1_iamce")
@@ -47,6 +55,35 @@ expand_margin_top = 4.0
 expand_margin_right = 4.0
 expand_margin_bottom = 4.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_blcns"]
+texture = ExtResource("7_blcns")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2gvgk"]
+texture = ExtResource("12_jewqu")
+texture_margin_top = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(0, 3, 8, 2)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i22yq"]
+texture = ExtResource("13_2gvgk")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(0, 2, 8, 4)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d1wfq"]
+texture = ExtResource("14_i22yq")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(0, 2, 8, 4)
+
 [node name="Theme Playground" type="Control" unique_id=627812290]
 layout_mode = 3
 anchors_preset = 15
@@ -55,6 +92,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="SpaceBackground" type="Sprite2D" parent="." unique_id=1820181624]
+position = Vector2(578, 341)
+texture = ExtResource("1_d1wfq")
+
+[node name="Button" type="Button" parent="." unique_id=1563965578]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 317.0
+offset_right = 645.0
+offset_bottom = 348.0
+text = "Can you click me?"
+
 [node name="Menu" type="Panel" parent="." unique_id=1982696679]
 layout_mode = 1
 anchors_preset = 8
@@ -62,9 +111,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -71.99997
+offset_left = -171.99997
 offset_top = -90.33334
-offset_right = 71.99997
+offset_right = -28.0
 offset_bottom = 90.33334
 grow_horizontal = 2
 grow_vertical = 2
@@ -151,6 +200,37 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_p8qnd")
 theme_override_styles/focus = SubResource("StyleBoxTexture_uio5m")
 text = "Exit
 "
+
+[node name="CheckBox" type="CheckBox" parent="." unique_id=1046073293]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 371.0
+offset_right = 702.0
+offset_bottom = 395.0
+theme_override_colors/font_color = Color(0.12941177, 0.09411765, 0.105882354, 1)
+theme_override_colors/font_focus_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_colors/font_pressed_color = Color(0.3882353, 0.67058825, 0.24705882, 1)
+theme_override_colors/font_hover_color = Color(0.9607843, 1, 0.9098039, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.3882353, 0.67058825, 0.24705882, 1)
+theme_override_fonts/font = ExtResource("5_p8qnd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_blcns")
+theme_override_icons/checked = ExtResource("8_uio5m")
+theme_override_icons/unchecked = ExtResource("9_flqlx")
+text = "Fullscreen"
+
+[node name="HSlider" type="HSlider" parent="." unique_id=1941437151]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 403.0
+offset_right = 696.0
+offset_bottom = 419.0
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber = ExtResource("10_sk6e2")
+theme_override_icons/grabber_highlight = ExtResource("11_jewqu")
+theme_override_styles/slider = SubResource("StyleBoxTexture_2gvgk")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_i22yq")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_d1wfq")
+value = 64.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=700701990]
 position = Vector2(574, 329)
