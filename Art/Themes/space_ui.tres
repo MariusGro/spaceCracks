@@ -1,0 +1,17 @@
+[gd_resource type="Theme" format=3 uid="uid://6g1vei00t7lh"]
+
+[ext_resource type="FontFile" uid="uid://duyx05e1wva85" path="res://Art/Fonts/tasePex2.ttf" id="1_dphib"]
+[ext_resource type="StyleBox" uid="uid://bdjs7qw17f6lc" path="res://Art/Themes/StyleBoxes/button_focus_style_box_texture.tres" id="2_1ej3x"]
+[ext_resource type="StyleBox" uid="uid://djwjwtlga0yf3" path="res://Art/Themes/StyleBoxes/button_hover_style_box_texture.tres" id="3_2bufi"]
+[ext_resource type="StyleBox" uid="uid://ciuqur045ugpm" path="res://Art/Themes/StyleBoxes/button_normal_style_box_texture.tres" id="4_s5yxw"]
+[ext_resource type="StyleBox" uid="uid://u6aosbkm82hl" path="res://Art/Themes/StyleBoxes/button_pressed_style_box_texture.tres" id="5_ijqgt"]
+
+[resource]
+Button/colors/font_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
+Button/colors/font_hover_color = Color(0.9607843, 1, 0.9098039, 1)
+Button/colors/font_pressed_color = Color(0.57254905, 0.9098039, 0.7529412, 1)
+Button/fonts/font = ExtResource("1_dphib")
+Button/styles/focus = ExtResource("2_1ej3x")
+Button/styles/hover = ExtResource("3_2bufi")
+Button/styles/normal = ExtResource("4_s5yxw")
+Button/styles/pressed = ExtResource("5_ijqgt")

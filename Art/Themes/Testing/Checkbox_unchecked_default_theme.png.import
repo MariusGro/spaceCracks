@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clu0lcfjd4u4y"
-path="res://.godot/imported/Panel_default_theme_texture.png-84f4114d2ef33e344e2d804ec7109df9.ctex"
+uid="uid://d3e7v0misc33t"
+path="res://.godot/imported/Checkbox_unchecked_default_theme.png-b48727229f5bc3b7ad11344fe06b865e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Themes/Panel_default_theme_texture.png"
-dest_files=["res://.godot/imported/Panel_default_theme_texture.png-84f4114d2ef33e344e2d804ec7109df9.ctex"]
+source_file="res://Art/Themes/Testing/Checkbox_unchecked_default_theme.png"
+dest_files=["res://.godot/imported/Checkbox_unchecked_default_theme.png-b48727229f5bc3b7ad11344fe06b865e.ctex"]
 
 [params]
 

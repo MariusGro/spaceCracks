@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcvr5chpyla4g"
-path="res://.godot/imported/Slider_area_grabber_default_theme.png-6e1ce704b7b56eae8d5eedcb1986183f.ctex"
+uid="uid://b1ikarv0lceqf"
+path="res://.godot/imported/button_hover.png-fba5a195068ff0635f835d9cd91fbb91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Themes/Slider_area_grabber_default_theme.png"
-dest_files=["res://.godot/imported/Slider_area_grabber_default_theme.png-6e1ce704b7b56eae8d5eedcb1986183f.ctex"]
+source_file="res://Art/Themes/Button/button_hover.png"
+dest_files=["res://.godot/imported/button_hover.png-fba5a195068ff0635f835d9cd91fbb91.ctex"]
 
 [params]
 
