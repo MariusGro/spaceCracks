@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://h6llsckt3yjx"]
+
+[ext_resource type="Theme" uid="uid://6g1vei00t7lh" path="res://Art/Themes/space_ui.tres" id="1_un4yt"]
+[ext_resource type="FontFile" uid="uid://beyh0g1o1lu6o" path="res://Art/Fonts/hopePlodeNostalg.ttf" id="2_17muo"]
+[ext_resource type="Texture2D" uid="uid://bp12ofbm5cfye" path="res://Art/UI/Icons/speaker_icon.png" id="2_ojbgt"]
+[ext_resource type="Texture2D" uid="uid://cc1tvr1nigly0" path="res://Art/UI/Icons/note_icon.png" id="3_17muo"]
+[ext_resource type="Texture2D" uid="uid://cvmgw7awekfkx" path="res://Art/UI/Icons/spark_icon.png" id="4_bmgoi"]
+
+[node name="Settings Menu" type="Panel" unique_id=544922857]
+custom_minimum_size = Vector2(256, 200)
+offset_right = 256.0
+offset_bottom = 200.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_un4yt")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1937708192]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.5
+offset_top = -6.25
+offset_right = -6.5
+offset_bottom = -6.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=959739533]
+layout_mode = 2
+
+[node name="Settings Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1072223476]
+custom_minimum_size = Vector2(104, 32)
+layout_mode = 2
+theme = ExtResource("1_un4yt")
+bbcode_enabled = true
+text = "[shake]Settings"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Fullscreen Checkbox" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=998284495]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_un4yt")
+text = "Fullscreen"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=235702035]
+layout_mode = 2
+theme = ExtResource("1_un4yt")
+theme_override_fonts/font = ExtResource("2_17muo")
+text = "Volume"
+horizontal_alignment = 2
+
+[node name="Volume Control" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=443341260]
+layout_mode = 2
+alignment = 1
+
+[node name="Volume Labels" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Volume Control" unique_id=1252805816]
+layout_mode = 2
+
+[node name="Maser Volume" type="Label" parent="MarginContainer/VBoxContainer/Volume Control/Volume Labels" unique_id=1397563767]
+layout_mode = 2
+text = "General"
+
+[node name="Music" type="Label" parent="MarginContainer/VBoxContainer/Volume Control/Volume Labels" unique_id=1647474297]
+layout_mode = 2
+text = "Music"
+
+[node name="SFX" type="Label" parent="MarginContainer/VBoxContainer/Volume Control/Volume Labels" unique_id=986966585]
+layout_mode = 2
+text = "SFX"
+
+[node name="Volume Sliders" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Volume Control" unique_id=1509987703]
+layout_mode = 2
+
+[node name="Maser Volume Slider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=1572655042]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+step = 10.0
+
+[node name="Music Volume Slider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=379478507]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+step = 10.0
+
+[node name="SFX Volume Slider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=120729708]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+step = 10.0
+
+[node name="Volume Icons" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Volume Control" unique_id=645963552]
+layout_mode = 2
+
+[node name="Master volume icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Volume Control/Volume Icons" unique_id=1869761696]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_ojbgt")
+
+[node name="Music icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Volume Control/Volume Icons" unique_id=2037133131]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_17muo")
+
+[node name="SFX icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Volume Control/Volume Icons" unique_id=1622212008]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_bmgoi")
+
+[node name="Back Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=127424662]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Back"

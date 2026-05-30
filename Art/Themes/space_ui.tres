@@ -13,6 +13,7 @@
 [ext_resource type="StyleBox" uid="uid://fb1ub2iwvkry" path="res://Art/Themes/StyleBoxes/slider_grabber_area_style_box_texture.tres" id="10_08fqi"]
 [ext_resource type="StyleBox" uid="uid://c0nmimyhlme07" path="res://Art/Themes/StyleBoxes/slider_grabber_area_highlight_style_box_texture.tres" id="11_0yev3"]
 [ext_resource type="StyleBox" uid="uid://bvafti5uumwqg" path="res://Art/Themes/StyleBoxes/slider_area_style_box_texture.tres" id="12_ts5c6"]
+[ext_resource type="FontFile" uid="uid://beyh0g1o1lu6o" path="res://Art/Fonts/hopePlodeNostalg.ttf" id="14_0yev3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ijqgt"]
 
@@ -39,10 +40,14 @@ CheckBox/styles/hover = SubResource("StyleBoxEmpty_ijqgt")
 CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_285mm")
 CheckBox/styles/normal = SubResource("StyleBoxEmpty_xutrd")
 CheckBox/styles/pressed = SubResource("StyleBoxEmpty_kfcx8")
-HSlider/constants/center_grabber = 1
 HSlider/icons/grabber = ExtResource("8_kfcx8")
 HSlider/icons/grabber_highlight = ExtResource("9_285mm")
 HSlider/styles/grabber_area = ExtResource("10_08fqi")
 HSlider/styles/grabber_area_highlight = ExtResource("11_0yev3")
 HSlider/styles/slider = ExtResource("12_ts5c6")
+Label/colors/font_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
+Label/fonts/font = ExtResource("1_dphib")
 Panel/styles/panel = ExtResource("6_2bufi")
+RichTextLabel/colors/default_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
+RichTextLabel/font_sizes/normal_font_size = 32
+RichTextLabel/fonts/normal_font = ExtResource("14_0yev3")
