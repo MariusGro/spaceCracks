@@ -14,20 +14,20 @@ Made by only one person (*sort of). By reading this you will see that this was o
 ### Other YouTube-Tutorials that made this project possible 🎬
 - Build Aseprite for free via GitHub https://www.youtube.com/watch?v=78T94w-Mms8
 - Text effects in Godot https://www.youtube.com/watch?v=AVe2hjcQRRg
-- Basics about Godot ui https://www.youtube.com/watch?v=5Hog6a0EYa0
-- How to properly scale ui-elements with a texture https://www.youtube.com/watch?v=4IA00K7cYfc
+- Basics about Godot UI https://www.youtube.com/watch?v=5Hog6a0EYa0
+- How to properly scale UI-elements with a texture https://www.youtube.com/watch?v=4IA00K7cYfc
 - Pixel Art UI https://www.youtube.com/watch?v=o3VHJ7g7M08
 - Instructions for making your own fonts https://www.youtube.com/watch?v=VwrNcxCGnUY
 
 ### About this project 📦
 - This is supposed to be a small project to practice not only my game development skills but also how to properly use git / github for version control.
-- This game is developed by a single person (me). Everything is either made by me or from resources that are publicly available. This is supposed a human creation. A work of art. Currently there is only one single function written by a clanker.
-- This game is not supposed to be very original or be that big in scope. This is more a preparation for possible bigger future projects... (you gotta start somewhere)
+- This game is developed by a single person (me). Everything is either made by me or from resources that are publicly available. This is supposed to be a human creation. A work of art. Currently there is only one single function written by a clanker.
+- This game is not supposed to be that big in scope. This is more a preparation for possible bigger future projects... (you gotta start somewhere)
 - Feel free to use everything in this project for whatever purposes but please give credit to the creators.
 
 ### About this game 🎮
 This game is a simple space shooter with a pixel-artstyle. The focus is on making a complete game with a high level of polish.
-That for example includes nice looking menus and all the other suff that is not gameplay. That does not mean, that there is no place for originality. There are a lot of ideas in my head but I try to avoid scope creep.
+That for example includes nice looking menus and all the other suff that is not gameplay. That does not mean, that there is no place for originality. There are a lot of ideas in my head but I try to avoid scope creep ([Ben's opinion about that statement](https://www.youtube.com/watch?v=9uE5B7r5Dp4)).
 
 ### About me
 I am a guy with only one prior gamedev-experience in a scool project. I started coding in 2023 and my coding skills are just above ChatGPT at best.
