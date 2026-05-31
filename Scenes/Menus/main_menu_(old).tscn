@@ -1,0 +1,214 @@
+[gd_scene format=3 uid="uid://ci0ujjnox6n8q"]
+
+[ext_resource type="Shader" uid="uid://dpoftjb7c5wly" path="res://Shaders/code_scroll.gdshader" id="1_nsnmp"]
+[ext_resource type="Texture2D" uid="uid://uel0ifpl6pnc" path="res://Art/UI/code_background_proper_scale.png" id="2_bx3da"]
+[ext_resource type="Texture2D" uid="uid://bh4gw1kf3gqxb" path="res://Art/UI/Cracks_background_proper_scale.png" id="3_8y2ci"]
+[ext_resource type="Texture2D" uid="uid://dgo4p3tfx1y7h" path="res://Art/UI/spaceCracks_title_spritesheet.png" id="4_lu3hr"]
+[ext_resource type="Texture2D" uid="uid://cg0g7hmsv7w33" path="res://Art/UI/MenuButtons/Start_normal.png" id="5_1hti5"]
+[ext_resource type="Texture2D" uid="uid://bgp3lcbjpnv3i" path="res://Art/UI/MenuButtons/Start_pressed.png" id="6_xndg1"]
+[ext_resource type="Texture2D" uid="uid://duhsfcqmo2i2f" path="res://Art/UI/MenuButtons/Start_hover.png" id="7_snjby"]
+[ext_resource type="Texture2D" uid="uid://bgtv1ha4w1oqm" path="res://Art/UI/MenuButtons/Start_disabled.png" id="8_5gqt7"]
+[ext_resource type="Texture2D" uid="uid://ct6o42t64tshn" path="res://Art/UI/MenuButtons/focused.png" id="9_y21g4"]
+[ext_resource type="Texture2D" uid="uid://ct6wyn10fjpet" path="res://Art/UI/MenuButtons/Options_normal.png" id="10_qawuj"]
+[ext_resource type="Texture2D" uid="uid://ioehj1pmi6ub" path="res://Art/UI/MenuButtons/Options_pressed.png" id="11_i1aw4"]
+[ext_resource type="Texture2D" uid="uid://c1l686d2jsfyu" path="res://Art/UI/MenuButtons/Options_hover.png" id="12_tqjmj"]
+[ext_resource type="Texture2D" uid="uid://b3c33532fuujh" path="res://Art/UI/MenuButtons/Options_disabled.png" id="13_v3j80"]
+[ext_resource type="Texture2D" uid="uid://gdcbttqnae8l" path="res://Art/UI/MenuButtons/Credits_normal.png" id="14_ooei5"]
+[ext_resource type="Texture2D" uid="uid://chveci3bpuc4a" path="res://Art/UI/MenuButtons/Credits_pressed.png" id="15_vs2lg"]
+[ext_resource type="Texture2D" uid="uid://dfu2ijxu1rts8" path="res://Art/UI/MenuButtons/Credits_hover.png" id="16_jis48"]
+[ext_resource type="Texture2D" uid="uid://cxa5qvvxruqwh" path="res://Art/UI/MenuButtons/Credits_disabled.png" id="17_0tkss"]
+[ext_resource type="Texture2D" uid="uid://ionlpt2s6vnk" path="res://Art/UI/MenuButtons/Exit_normal.png" id="18_khe37"]
+[ext_resource type="Texture2D" uid="uid://dgb0kmk37ygul" path="res://Art/UI/MenuButtons/Exit_pressed.png" id="19_bxjat"]
+[ext_resource type="Texture2D" uid="uid://dfua2wsiguyjx" path="res://Art/UI/MenuButtons/Exit_hover.png" id="20_8tlae"]
+[ext_resource type="Texture2D" uid="uid://cf8v5fp8vb7da" path="res://Art/UI/MenuButtons/Exit_disabled.png" id="21_6ngew"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ou7d0"]
+shader = ExtResource("1_nsnmp")
+shader_parameter/speed = 0.01
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rh2w"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(0, 0, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou7d0"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(224, 0, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47bqg"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(448, 0, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cflx4"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(672, 0, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg3ot"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(0, 48, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h56lv"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(224, 48, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e57l0"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(448, 48, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwyy1"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(672, 48, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef2r8"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(0, 96, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ih0d"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(224, 96, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m71hm"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(448, 96, 224, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ldpj"]
+atlas = ExtResource("4_lu3hr")
+region = Rect2(672, 96, 224, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ttci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rh2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou7d0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47bqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cflx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg3ot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h56lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e57l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwyy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef2r8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ih0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m71hm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ldpj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="MainMenu" type="Control" unique_id=2116818785]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cool Code" type="TextureRect" parent="." unique_id=1281714107]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ou7d0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bx3da")
+
+[node name="Space Ckracks" type="TextureRect" parent="." unique_id=692484999]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8y2ci")
+
+[node name="Title" type="Control" parent="." unique_id=1197471253]
+custom_minimum_size = Vector2(224, 48)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 48.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+pivot_offset_ratio = Vector2(0.5, 0)
+
+[node name="Title Animated Sprite" type="AnimatedSprite2D" parent="Title" unique_id=956719575]
+position = Vector2(112, 24)
+sprite_frames = SubResource("SpriteFrames_4ttci")
+autoplay = "default"
+frame_progress = 0.30363676
+
+[node name="Menu Buttons" type="VBoxContainer" parent="." unique_id=759045293]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -6.0
+offset_right = 24.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Start" type="TextureButton" parent="Menu Buttons" unique_id=1296429753]
+layout_mode = 2
+texture_normal = ExtResource("5_1hti5")
+texture_pressed = ExtResource("6_xndg1")
+texture_hover = ExtResource("7_snjby")
+texture_disabled = ExtResource("8_5gqt7")
+texture_focused = ExtResource("9_y21g4")
+
+[node name="Options" type="TextureButton" parent="Menu Buttons" unique_id=1322233231]
+layout_mode = 2
+texture_normal = ExtResource("10_qawuj")
+texture_pressed = ExtResource("11_i1aw4")
+texture_hover = ExtResource("12_tqjmj")
+texture_disabled = ExtResource("13_v3j80")
+texture_focused = ExtResource("9_y21g4")
+
+[node name="Credits" type="TextureButton" parent="Menu Buttons" unique_id=1770898288]
+layout_mode = 2
+texture_normal = ExtResource("14_ooei5")
+texture_pressed = ExtResource("15_vs2lg")
+texture_hover = ExtResource("16_jis48")
+texture_disabled = ExtResource("17_0tkss")
+texture_focused = ExtResource("9_y21g4")
+
+[node name="Exit" type="TextureButton" parent="Menu Buttons" unique_id=686808399]
+layout_mode = 2
+texture_normal = ExtResource("18_khe37")
+texture_pressed = ExtResource("19_bxjat")
+texture_hover = ExtResource("20_8tlae")
+texture_disabled = ExtResource("21_6ngew")
+texture_focused = ExtResource("9_y21g4")
