@@ -2,9 +2,12 @@
 
 [ext_resource type="Theme" uid="uid://6g1vei00t7lh" path="res://Art/Themes/space_ui.tres" id="1_un4yt"]
 [ext_resource type="FontFile" uid="uid://beyh0g1o1lu6o" path="res://Art/Fonts/hopePlodeNostalg.ttf" id="2_17muo"]
+[ext_resource type="Script" uid="uid://cey7ylkbae4j0" path="res://Scripts/Menu-Scripts/settings_menu.gd" id="2_bmgoi"]
 [ext_resource type="Texture2D" uid="uid://bp12ofbm5cfye" path="res://Art/UI/Icons/speaker_icon.png" id="2_ojbgt"]
+[ext_resource type="Script" uid="uid://bs0ghkrqmx7ek" path="res://Scripts/Menu-Scripts/fullscreen_controll.gd" id="3_04fbl"]
 [ext_resource type="Texture2D" uid="uid://cc1tvr1nigly0" path="res://Art/UI/Icons/note_icon.png" id="3_17muo"]
 [ext_resource type="Texture2D" uid="uid://cvmgw7awekfkx" path="res://Art/UI/Icons/spark_icon.png" id="4_bmgoi"]
+[ext_resource type="Script" uid="uid://co7i3egtfmxjp" path="res://Scripts/Menu-Scripts/audio_controll.gd" id="4_vgtnp"]
 
 [node name="Settings Menu" type="Panel" unique_id=544922857]
 custom_minimum_size = Vector2(256, 200)
@@ -12,6 +15,7 @@ offset_right = 256.0
 offset_bottom = 200.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = ExtResource("1_un4yt")
+script = ExtResource("2_bmgoi")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1937708192]
 layout_mode = 1
@@ -46,6 +50,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("1_un4yt")
 text = "Fullscreen"
+script = ExtResource("3_04fbl")
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=235702035]
 layout_mode = 2
@@ -84,7 +89,11 @@ step = 10.0
 [node name="Music Volume Slider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=379478507]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
-step = 10.0
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource("4_vgtnp")
+audio_bus_name = "Music"
 
 [node name="SFX Volume Slider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=120729708]
 custom_minimum_size = Vector2(128, 0)
@@ -110,7 +119,12 @@ size_flags_horizontal = 4
 texture = ExtResource("4_bmgoi")
 
 [node name="Back Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=127424662]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_pressed_color = Color(0.9019608, 0.27058825, 0.22352941, 1)
 text = "Back"
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/Fullscreen Checkbox" to="MarginContainer/VBoxContainer/Fullscreen Checkbox" method="_on_toggled"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume Control/Volume Sliders/Music Volume Slider" to="MarginContainer/VBoxContainer/Volume Control/Volume Sliders/Music Volume Slider" method="_on_value_changed"]

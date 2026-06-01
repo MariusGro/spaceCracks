@@ -11,13 +11,16 @@ config_version=5
 [application]
 
 config/name="Space Cracks"
-run/main_scene="uid://b1m6nx3lp8rf"
+run/main_scene="uid://g0blx63i5t5p"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://b4aw7no4quex1"
 
+[audio]
+
+buses/default_bus_layout="uid://mv6i7trjwjqc"
+
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [file_customization]
