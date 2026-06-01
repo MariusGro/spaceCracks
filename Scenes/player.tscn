@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://075a72iqy3ag" path="res://Scenes/spaceship.tscn" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://bld114qldask0" path="res://Art/spaceship.png" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://d3c2oinumpdh0" path="res://Art/laser_red_particle.png" id="2_fkybt"]
-[ext_resource type="Script" uid="uid://cqmtblv7uyu60" path="res://Scripts/player.gd" id="2_vgqql"]
+[ext_resource type="Script" uid="uid://cqmtblv7uyu60" path="res://Scripts/Player.gd" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://dn13o1yb38lme" path="res://Art/UI/fill_green.png" id="5_x3wgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3wgy"]

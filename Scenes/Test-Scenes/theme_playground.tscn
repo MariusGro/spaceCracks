@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://dx5mv78bdedj5"]
+
+[ext_resource type="Texture2D" uid="uid://ccybnsogxu1v2" path="res://Art/Space_background.png" id="1_d1wfq"]
+[ext_resource type="Shader" uid="uid://brtdr6n0oodiq" path="res://Shaders/Scroll.gdshader" id="1_e16ae"]
+[ext_resource type="FontFile" uid="uid://beyh0g1o1lu6o" path="res://Art/Fonts/hopePlodeNostalg.ttf" id="2_blcns"]
+[ext_resource type="Theme" uid="uid://6g1vei00t7lh" path="res://Art/Themes/space_ui.tres" id="16_fpdsf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p8qnd"]
+shader = ExtResource("1_e16ae")
+shader_parameter/speed = 0.05
+
+[node name="Theme Playground" type="Control" unique_id=627812290]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpaceBackground" type="Sprite2D" parent="." unique_id=1820181624]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_p8qnd")
+position = Vector2(578, 341)
+texture = ExtResource("1_d1wfq")
+
+[node name="Menu" type="Panel" parent="." unique_id=1982696679]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.99997
+offset_top = -57.0
+offset_right = 144.0
+offset_bottom = 90.33334
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("16_fpdsf")
+
+[node name="Title" type="RichTextLabel" parent="Menu" unique_id=279011033]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.9999695
+offset_top = 7.0
+offset_right = -114.0
+offset_bottom = 37.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
+theme_override_fonts/normal_font = ExtResource("2_blcns")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[wave]Main menu"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Title2" type="RichTextLabel" parent="Menu" unique_id=764666952]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 170.99997
+offset_top = 14.0
+offset_right = 10.0
+offset_bottom = 44.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
+theme_override_fonts/normal_font = ExtResource("2_blcns")
+bbcode_enabled = true
+text = "[shake level = 10]Settings"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="." unique_id=1046073293]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 347.0
+offset_right = 626.0
+offset_bottom = 371.0
+theme = ExtResource("16_fpdsf")
+text = "Fullscreen"
+
+[node name="Button1" type="Button" parent="." unique_id=121994061]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 309.0
+offset_right = 476.0
+offset_bottom = 340.0
+theme = ExtResource("16_fpdsf")
+text = "Start"
+
+[node name="Button2" type="Button" parent="." unique_id=391317613]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 308.0
+offset_right = 557.0
+offset_bottom = 339.0
+theme = ExtResource("16_fpdsf")
+text = "Options"
+
+[node name="Button3" type="Button" parent="." unique_id=260763714]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 376.0
+offset_right = 460.0
+offset_bottom = 407.0
+theme = ExtResource("16_fpdsf")
+text = "Exit"
+
+[node name="Button4" type="Button" parent="." unique_id=1490340722]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 342.0
+offset_right = 480.0
+offset_bottom = 373.0
+theme = ExtResource("16_fpdsf")
+text = "Credits"
+
+[node name="CheckBox2" type="CheckBox" parent="." unique_id=1170886523]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 378.0
+offset_right = 562.0
+offset_bottom = 402.0
+theme = ExtResource("16_fpdsf")
+text = "Click me!"
+
+[node name="CheckBox3" type="CheckBox" parent="." unique_id=361923330]
+layout_mode = 0
+offset_left = 574.0
+offset_top = 377.0
+offset_right = 664.0
+offset_bottom = 401.0
+theme = ExtResource("16_fpdsf")
+text = "God-Mode"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1323242715]
+position = Vector2(540, 341)
+zoom = Vector2(3, 3)
+
+[node name="HSlider" type="HSlider" parent="." unique_id=1171877868]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 316.0
+offset_right = 657.0
+offset_bottom = 332.0
+theme = ExtResource("16_fpdsf")
+step = 5.0
+value = 65.0
