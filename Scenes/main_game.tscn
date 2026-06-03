@@ -5,10 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://ccybnsogxu1v2" path="res://Art/Space_background.png" id="4_6j5ir"]
 [ext_resource type="Script" uid="uid://dllh6fqac8nxu" path="res://Scripts/Camera.gd" id="4_mgc0q"]
 [ext_resource type="PackedScene" uid="uid://b52bwnoheqr0o" path="res://Scenes/enemy.tscn" id="5_mgc0q"]
+[ext_resource type="PackedScene" uid="uid://ckk1k7d7t8wan" path="res://Scenes/Menus/pause_menu.tscn" id="6_bb2iq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mgc0q"]
 shader = ExtResource("1_0e3vx")
 shader_parameter/speed = -0.05
+shader_parameter/shader_process = true
 
 [node name="Main Game" type="Node2D" unique_id=1042054106]
 
@@ -52,3 +54,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_6j5ir")
 stretch_mode = 1
+
+[node name="PauseMenu" parent="." unique_id=115891806 instance=ExtResource("6_bb2iq")]
+
+[connection signal="pause_mode_changed" from="PauseMenu" to="Background" method="_on_pause_menu_pause_mode_changed"]

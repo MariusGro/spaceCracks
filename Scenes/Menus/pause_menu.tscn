@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://ckk1k7d7t8wan"]
+
+[ext_resource type="Theme" uid="uid://6g1vei00t7lh" path="res://Art/Themes/space_ui.tres" id="1_as6yf"]
+[ext_resource type="Script" uid="uid://yi3cvt2or86n" path="res://Scripts/Menu-Scripts/pause_menu.gd" id="1_pw12o"]
+[ext_resource type="PackedScene" uid="uid://h6llsckt3yjx" path="res://Scenes/Menus/settings_menu.tscn" id="4_yeo1y"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=115891806]
+process_mode = 3
+script = ExtResource("1_pw12o")
+
+[node name="PauseTitle" type="RichTextLabel" parent="." unique_id=694078039]
+process_mode = 2
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -132.0
+offset_top = 36.0
+offset_right = 132.0
+offset_bottom = 164.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_as6yf")
+theme_override_colors/font_shadow_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[wave]Pause"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="PauseMenuPanel" type="Panel" parent="." unique_id=1168084435]
+process_mode = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -11.0
+offset_right = 63.5
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_as6yf")
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenuPanel" unique_id=1466428903]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenuPanel/MarginContainer" unique_id=483505347]
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="PauseMenuPanel/MarginContainer/VBoxContainer" unique_id=411892085]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Continue"
+
+[node name="Settings" type="Button" parent="PauseMenuPanel/MarginContainer/VBoxContainer" unique_id=1133733140]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_pressed_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+text = "Settings"
+
+[node name="Title Screen" type="Button" parent="PauseMenuPanel/MarginContainer/VBoxContainer" unique_id=537663744]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_pressed_color = Color(0.9019608, 0.27058825, 0.22352941, 1)
+text = "Title screen"
+
+[node name="Settings Menu" parent="." unique_id=684832870 instance=ExtResource("4_yeo1y")]
+process_mode = 2
+visible = false
+
+[connection signal="pressed" from="PauseMenuPanel/MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseMenuPanel/MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PauseMenuPanel/MarginContainer/VBoxContainer/Title Screen" to="." method="_on_title_screen_pressed"]
