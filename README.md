@@ -46,7 +46,7 @@ Here are the features I plan to add in order.
 - [X] Create version control
 - [X] Discuss wether Player and Enemy should share an additional parent-class or if this is just form over function
 - [X] Create a main menu
-- [] Create a pause menu
+- [X] Create a pause menu
 - [] Create a game-over-screen
 - [] Add enemy-AI
 - [] Add asteroids
