@@ -51,7 +51,7 @@ func update_health_bar() -> void:
 		health_bar.visible = true
 		health_bar.setHealth(health, max_health)
 		if health <= 0:
-			print(name + " has been defeated")
+			print(name + " has been defeated") # Is not triggered by the player! (game-over-screen)
 			queue_free()
 	else:
 		health_bar.visible = false

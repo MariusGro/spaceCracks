@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://cukr0hn2rdwnk"]
+
+[ext_resource type="Theme" uid="uid://6g1vei00t7lh" path="res://Art/Themes/space_ui.tres" id="1_gt22q"]
+[ext_resource type="Script" uid="uid://btduxhy60do5l" path="res://Scripts/Menu-Scripts/game_over_screen.gd" id="1_l4tlu"]
+[ext_resource type="Texture2D" uid="uid://biayqa2o5cfe2" path="res://Art/UI/cracks_background_v2.png" id="2_fdghx"]
+[ext_resource type="Shader" uid="uid://dnmkmgtn6oiv2" path="res://Shaders/glitch_effect.gdshader" id="2_w3hxg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l4tlu"]
+shader = ExtResource("2_w3hxg")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.010000000475
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 5.0
+shader_parameter/shake_color_rate = 0.01
+
+[node name="GameOverScreen" type="CanvasLayer" unique_id=1894610670]
+script = ExtResource("1_l4tlu")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2084037206]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fdghx")
+
+[node name="GameOverTitle" type="RichTextLabel" parent="." unique_id=871496533]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -268.0
+offset_top = 64.0
+offset_right = 268.0
+offset_bottom = 192.0
+grow_horizontal = 2
+theme = ExtResource("1_gt22q")
+theme_override_colors/font_shadow_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[shake]Game Over"
+fit_content = true
+autowrap_mode = 0
+
+[node name="GlitchEffect" type="ColorRect" parent="GameOverTitle" unique_id=861597535]
+material = SubResource("ShaderMaterial_l4tlu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=337762605]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -2.0
+offset_right = 67.5
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_gt22q")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=189267007]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=93446152]
+layout_mode = 2
+alignment = 1
+
+[node name="Retry" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1160243751]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Retry"
+
+[node name="TitleScreen" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1076219534]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Title screen"
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/TitleScreen" to="." method="_on_title_screen_pressed"]
