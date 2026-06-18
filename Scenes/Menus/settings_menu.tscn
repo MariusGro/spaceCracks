@@ -4,28 +4,41 @@
 [ext_resource type="FontFile" uid="uid://beyh0g1o1lu6o" path="res://Art/Fonts/hopePlodeNostalg.ttf" id="2_17muo"]
 [ext_resource type="Script" uid="uid://cey7ylkbae4j0" path="res://Scripts/Menu-Scripts/settings_menu.gd" id="2_bmgoi"]
 [ext_resource type="Texture2D" uid="uid://bp12ofbm5cfye" path="res://Art/UI/Icons/speaker_icon.png" id="2_ojbgt"]
-[ext_resource type="Script" uid="uid://bs0ghkrqmx7ek" path="res://Scripts/Menu-Scripts/fullscreen_controll.gd" id="3_04fbl"]
 [ext_resource type="Texture2D" uid="uid://cc1tvr1nigly0" path="res://Art/UI/Icons/note_icon.png" id="3_17muo"]
 [ext_resource type="Texture2D" uid="uid://cvmgw7awekfkx" path="res://Art/UI/Icons/spark_icon.png" id="4_bmgoi"]
 [ext_resource type="Script" uid="uid://co7i3egtfmxjp" path="res://Scripts/Menu-Scripts/audio_controll.gd" id="4_vgtnp"]
 
-[node name="Settings Menu" type="Panel" unique_id=544922857]
-custom_minimum_size = Vector2(256, 200)
-offset_right = 256.0
-offset_bottom = 200.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-theme = ExtResource("1_un4yt")
+[node name="Settings Menu" type="CanvasLayer" unique_id=684832870]
 script = ExtResource("2_bmgoi")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1937708192]
+[node name="SettingsPanel" type="Panel" parent="." unique_id=1859779904]
+custom_minimum_size = Vector2(256, 208)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -24.0
+offset_right = 128.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_un4yt")
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsPanel" unique_id=1937708192]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -6.5
-offset_top = -6.25
-offset_right = -6.5
-offset_bottom = -6.25
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -103.5
+offset_right = 121.0
+offset_bottom = 103.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 16
@@ -33,60 +46,60 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=959739533]
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel/MarginContainer" unique_id=959739533]
 layout_mode = 2
 
-[node name="Settings Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1072223476]
+[node name="Settings Title" type="RichTextLabel" parent="SettingsPanel/MarginContainer/VBoxContainer" unique_id=1072223476]
 custom_minimum_size = Vector2(104, 32)
 layout_mode = 2
 theme = ExtResource("1_un4yt")
 bbcode_enabled = true
 text = "[shake]Settings"
+fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="Fullscreen Checkbox" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=998284495]
+[node name="Fullscreen Checkbox" type="CheckBox" parent="SettingsPanel/MarginContainer/VBoxContainer" unique_id=998284495]
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("1_un4yt")
 text = "Fullscreen"
-script = ExtResource("3_04fbl")
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=235702035]
+[node name="Label" type="Label" parent="SettingsPanel/MarginContainer/VBoxContainer" unique_id=235702035]
 layout_mode = 2
 theme = ExtResource("1_un4yt")
 theme_override_fonts/font = ExtResource("2_17muo")
 text = "Volume"
 horizontal_alignment = 2
 
-[node name="Volume Control" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=443341260]
+[node name="Volume Control" type="HBoxContainer" parent="SettingsPanel/MarginContainer/VBoxContainer" unique_id=443341260]
 layout_mode = 2
 alignment = 1
 
-[node name="Volume Labels" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Volume Control" unique_id=1252805816]
+[node name="Volume Labels" type="VBoxContainer" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control" unique_id=1252805816]
 layout_mode = 2
 
-[node name="Maser Volume" type="Label" parent="MarginContainer/VBoxContainer/Volume Control/Volume Labels" unique_id=1397563767]
+[node name="Maser Volume" type="Label" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Labels" unique_id=1397563767]
 layout_mode = 2
 text = "General"
 
-[node name="Music" type="Label" parent="MarginContainer/VBoxContainer/Volume Control/Volume Labels" unique_id=1647474297]
+[node name="Music" type="Label" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Labels" unique_id=1647474297]
 layout_mode = 2
 text = "Music"
 
-[node name="SFX" type="Label" parent="MarginContainer/VBoxContainer/Volume Control/Volume Labels" unique_id=986966585]
+[node name="SFX" type="Label" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Labels" unique_id=986966585]
 layout_mode = 2
 text = "SFX"
 
-[node name="Volume Sliders" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Volume Control" unique_id=1509987703]
+[node name="Volume Sliders" type="VBoxContainer" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control" unique_id=1509987703]
 layout_mode = 2
 
-[node name="Maser Volume Slider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=1572655042]
+[node name="Maser Volume Slider" type="HSlider" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=1572655042]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 step = 10.0
 
-[node name="Music Volume Slider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=379478507]
+[node name="Music Volume Slider" type="HSlider" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=379478507]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 max_value = 1.0
@@ -95,30 +108,30 @@ value = 1.0
 script = ExtResource("4_vgtnp")
 audio_bus_name = "Music"
 
-[node name="SFX Volume Slider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=120729708]
+[node name="SFX Volume Slider" type="HSlider" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Sliders" unique_id=120729708]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 step = 10.0
 
-[node name="Volume Icons" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Volume Control" unique_id=645963552]
+[node name="Volume Icons" type="VBoxContainer" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control" unique_id=645963552]
 layout_mode = 2
 
-[node name="Master volume icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Volume Control/Volume Icons" unique_id=1869761696]
+[node name="Master volume icon" type="TextureRect" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Icons" unique_id=1869761696]
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("2_ojbgt")
 
-[node name="Music icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Volume Control/Volume Icons" unique_id=2037133131]
+[node name="Music icon" type="TextureRect" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Icons" unique_id=2037133131]
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("3_17muo")
 
-[node name="SFX icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Volume Control/Volume Icons" unique_id=1622212008]
+[node name="SFX icon" type="TextureRect" parent="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Icons" unique_id=1622212008]
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("4_bmgoi")
 
-[node name="Back Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=127424662]
+[node name="Back Button" type="Button" parent="SettingsPanel/MarginContainer/VBoxContainer" unique_id=127424662]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -126,5 +139,5 @@ size_flags_vertical = 4
 theme_override_colors/font_pressed_color = Color(0.9019608, 0.27058825, 0.22352941, 1)
 text = "Back"
 
-[connection signal="toggled" from="MarginContainer/VBoxContainer/Fullscreen Checkbox" to="MarginContainer/VBoxContainer/Fullscreen Checkbox" method="_on_toggled"]
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume Control/Volume Sliders/Music Volume Slider" to="MarginContainer/VBoxContainer/Volume Control/Volume Sliders/Music Volume Slider" method="_on_value_changed"]
+[connection signal="toggled" from="SettingsPanel/MarginContainer/VBoxContainer/Fullscreen Checkbox" to="." method="_on_fullscreen_checkbox_toggled"]
+[connection signal="value_changed" from="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Sliders/Music Volume Slider" to="SettingsPanel/MarginContainer/VBoxContainer/Volume Control/Volume Sliders/Music Volume Slider" method="_on_value_changed"]
