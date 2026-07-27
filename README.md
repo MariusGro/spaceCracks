@@ -47,7 +47,7 @@ Here are the features I plan to add in order.
 - [X] Discuss wether Player and Enemy should share an additional parent-class or if this is just form over function
 - [X] Create a main menu
 - [X] Create a pause menu
-- [] Create a game-over-screen
+- [x] Create a game-over-screen
 - [] Add enemy-AI
 - [] Add asteroids
 - [] Add upgrades (health, faster fire, speed, etc.)
