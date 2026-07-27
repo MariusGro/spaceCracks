@@ -129,6 +129,7 @@ animations = [{
 [node name="Main Game" type="Node2D" unique_id=1042054106]
 
 [node name="Player" parent="." unique_id=1117742302 instance=ExtResource("2_pu3va")]
+max_health = 20
 
 [node name="Camera" type="Camera2D" parent="Player" unique_id=1210366096]
 position = Vector2(0, -100)

@@ -4,7 +4,6 @@ extends CanvasLayer
 @onready var pause_title: RichTextLabel = $PauseTitle
 @onready var pause_menu_panel: Panel = $PauseMenuPanel
 
-signal pause_mode_changed(mode: float)
 
 func _ready() -> void:
 	set_pause_menu_visibility(false)

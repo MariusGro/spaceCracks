@@ -21,3 +21,8 @@ func custom_physics_process(delta: float) -> void:
 
 func custom_damage_behavior(damage: int) -> void:
 	emit_signal("triggerShake", damage)
+	if health <= 0:
+		call_deferred("load_game_over_screen") # Because some physics-processes may still run
+
+func load_game_over_screen():
+	get_tree().change_scene_to_file("res://game_over_screen.tscn")
