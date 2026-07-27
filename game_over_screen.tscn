@@ -3,7 +3,13 @@
 [ext_resource type="Theme" uid="uid://6g1vei00t7lh" path="res://Art/Themes/space_ui.tres" id="1_gt22q"]
 [ext_resource type="Script" uid="uid://btduxhy60do5l" path="res://Scripts/Menu-Scripts/game_over_screen.gd" id="1_l4tlu"]
 [ext_resource type="Texture2D" uid="uid://biayqa2o5cfe2" path="res://Art/UI/cracks_background_v2.png" id="2_fdghx"]
+[ext_resource type="Shader" uid="uid://dpoftjb7c5wly" path="res://Shaders/code_scroll.gdshader" id="2_tmhko"]
 [ext_resource type="Shader" uid="uid://dnmkmgtn6oiv2" path="res://Shaders/glitch_effect.gdshader" id="2_w3hxg"]
+[ext_resource type="Texture2D" uid="uid://m4xlyr0qbk7a" path="res://Art/UI/Game_over_error_log.png" id="3_lqr8p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r1tj2"]
+shader = ExtResource("2_tmhko")
+shader_parameter/speed = 0.1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l4tlu"]
 shader = ExtResource("2_w3hxg")
@@ -16,7 +22,17 @@ shader_parameter/shake_color_rate = 0.01
 [node name="GameOverScreen" type="CanvasLayer" unique_id=1894610670]
 script = ExtResource("1_l4tlu")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2084037206]
+[node name="ErrorTexture" type="TextureRect" parent="." unique_id=1117220927]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_r1tj2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_lqr8p")
+
+[node name="Cracks" type="TextureRect" parent="." unique_id=2084037206]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
