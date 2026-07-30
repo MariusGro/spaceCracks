@@ -21,7 +21,6 @@ buses/default_bus_layout="uid://mv6i7trjwjqc"
 
 [display]
 
-window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [file_customization]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b52bwnoheqr0o"]
 
 [ext_resource type="PackedScene" uid="uid://075a72iqy3ag" path="res://Scenes/spaceship.tscn" id="1_1f0kj"]
-[ext_resource type="Script" uid="uid://b6f1pjkf0ebuq" path="res://Scripts/enemy.gd" id="2_afpow"]
+[ext_resource type="Script" uid="uid://b6f1pjkf0ebuq" path="res://Scripts/Enemy.gd" id="2_afpow"]
 [ext_resource type="Texture2D" uid="uid://bnoglvimt7psx" path="res://Art/laser_green_particle.png" id="3_287tu"]
 [ext_resource type="Texture2D" uid="uid://4ew4ow58yqgj" path="res://Art/enemy.png" id="4_0830c"]
 
@@ -13,6 +13,7 @@ size = Vector2(16, 11)
 
 [node name="Enemy" unique_id=1117742302 groups=["Enemy"] instance=ExtResource("1_1f0kj")]
 script = ExtResource("2_afpow")
+enemy_mode = 0
 projectile_sprite = ExtResource("3_287tu")
 projectile_group = "Enemy_projectile"
 projectile_y_correction = 11

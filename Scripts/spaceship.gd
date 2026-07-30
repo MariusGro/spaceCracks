@@ -22,6 +22,7 @@ var health: int = 1
 
 func _ready() -> void:
 	health = max_health
+	custom_ready_behavior()
 
 
 func _process(delta: float) -> void:
@@ -32,6 +33,11 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 	custom_physics_process(delta)
+
+## Is called by the default [method Node._ready]-method.
+## Used to add content from inheriting classes to the main-loop.
+func custom_ready_behavior() -> void:
+	pass
 
 
 ## Is called by the default [method Node._process]-method.
