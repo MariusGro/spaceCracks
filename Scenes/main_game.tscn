@@ -144,6 +144,8 @@ script = ExtResource("4_mgc0q")
 
 [node name="Enemy" parent="." unique_id=714749905 instance=ExtResource("5_mgc0q")]
 position = Vector2(-59, -61)
+fire_enabled = true
+patrol_radius = 100
 
 [node name="PauseMenu" parent="." unique_id=115891806 instance=ExtResource("6_bb2iq")]
 
