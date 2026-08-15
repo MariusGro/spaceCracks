@@ -121,7 +121,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ry2jr")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 8.0
 }]
@@ -129,7 +129,13 @@ animations = [{
 [node name="Main Game" type="Node2D" unique_id=1042054106]
 
 [node name="Player" parent="." unique_id=1117742302 instance=ExtResource("2_pu3va")]
-max_health = 20
+unique_name_in_owner = true
+max_health = 10
+fire_interval = 0.2
+harmful_groups = Dictionary[String, int]({
+"Enemy": 5,
+"Enemy_projectile": 2
+})
 
 [node name="Camera" type="Camera2D" parent="Player" unique_id=1210366096]
 position = Vector2(0, -100)
@@ -143,9 +149,54 @@ position_smoothing_speed = 4.0
 script = ExtResource("4_mgc0q")
 
 [node name="Enemy" parent="." unique_id=714749905 instance=ExtResource("5_mgc0q")]
-position = Vector2(-59, -61)
+position = Vector2(62, -45)
+enemy_mode = 3
 fire_enabled = true
-patrol_radius = 100
+patrol_radius = 300
+target_offset = Vector2(25, -150)
+max_health = 20
+speed = 50
+projectile_speed = 150
+
+[node name="Enemy2" parent="." unique_id=1205610921 instance=ExtResource("5_mgc0q")]
+position = Vector2(-64, -130)
+enemy_mode = 3
+fire_enabled = true
+patrol_radius = 300
+target_offset = Vector2(0, -150)
+max_health = 20
+speed = 50
+fire_interval = 0.5
+projectile_speed = 150
+
+[node name="Enemy3" parent="." unique_id=824229176 instance=ExtResource("5_mgc0q")]
+position = Vector2(-158, -67)
+enemy_mode = 3
+fire_enabled = true
+patrol_radius = 300
+target_offset = Vector2(-25, -150)
+max_health = 20
+speed = 50
+projectile_speed = 150
+
+[node name="Enemy4" parent="." unique_id=651116879 instance=ExtResource("5_mgc0q")]
+position = Vector2(208, -48)
+enemy_mode = 2
+fire_enabled = true
+patrol_radius = 300
+target_offset = Vector2(0, 0)
+fire_interval = 2.0
+projectile_speed = 150
+
+[node name="Enemy5" parent="." unique_id=563569883 instance=ExtResource("5_mgc0q")]
+position = Vector2(0, -230)
+enemy_mode = 1
+fire_enabled = true
+patrol_radius = 250
+target_offset = Vector2(0, 0)
+max_health = 20
+speed = 50
+fire_interval = 0.5
 
 [node name="PauseMenu" parent="." unique_id=115891806 instance=ExtResource("6_bb2iq")]
 
@@ -156,8 +207,10 @@ autoscroll = Vector2(0, 16)
 repeat_times = 3
 follow_viewport = false
 screen_offset = Vector2(256, 256)
+metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpaceBackground" unique_id=1729369084]
 sprite_frames = SubResource("SpriteFrames_qnvbm")
 autoplay = "default"
 frame_progress = 0.55914295
+metadata/_edit_lock_ = true

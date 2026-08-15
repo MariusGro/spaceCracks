@@ -9,12 +9,15 @@
 z_index = 1
 script = ExtResource("2_1hcmv")
 max_health = 10
+speed = 100
+fire_interval = 1.0
 projectile_speed = 50
 projectile_sprite = ExtResource("3_iohgh")
 projectile_group = "None"
 projectile_x_correction = 0
 projectile_y_correction = 0
 projectile_direction = Vector2(0, 0)
+damage_color = Color(1, 1, 1, 1)
 harmful_groups = Dictionary[String, int]({})
 
 [node name="Health Bar" parent="." index="3" unique_id=1530227510 instance=ExtResource("4_iohgh")]

@@ -7,16 +7,27 @@ func _ready() -> void:
 	show_main_menu()
 	settings.back_button.connect("pressed", show_main_menu)
 
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel") and settings.visible:
+		show_main_menu()
+
+
 func show_main_menu() -> void:
 	main_menu_panel.visible = true
 	settings.visible = false
+	%Start.grab_focus()
+
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_game.tscn")
 
+
 func _on_settings_pressed() -> void:
 	main_menu_panel.visible = false
 	settings.visible = true
+	settings.fullscreen_checkbox.grab_focus()
+
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

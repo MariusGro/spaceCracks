@@ -5,6 +5,8 @@ class_name Spaceship
 const PROJECTILE: PackedScene = preload("res://Scenes/laser.tscn")
 
 @export var max_health: int = 10
+@export var speed: int = 100
+@export var fire_interval: float = 1.0
 @export var projectile_speed: int = 50
 @export var projectile_sprite: Texture2D = preload("res://Art/laser_empty_particle.png")
 @export var projectile_group: String = "None"
@@ -14,6 +16,7 @@ const PROJECTILE: PackedScene = preload("res://Scenes/laser.tscn")
 @export var damage_color: Color = Color.WHITE
 @export var harmful_groups: Dictionary[String, int] = {}
 
+
 @onready var health_bar: HealthBar = $"Health Bar"
 @onready var fire_cooldown: Timer = $"Fire Cooldown"
 
@@ -22,6 +25,7 @@ var health: int = 1
 
 func _ready() -> void:
 	health = max_health
+	fire_cooldown.wait_time = fire_interval
 	custom_ready_behavior()
 
 
@@ -33,6 +37,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 	custom_physics_process(delta)
+
 
 ## Is called by the default [method Node._ready]-method.
 ## Used to add content from inheriting classes to the main-loop.

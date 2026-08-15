@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://xrjmcrpnuaj0"]
+
+[ext_resource type="PackedScene" uid="uid://b52bwnoheqr0o" path="res://Scenes/enemy.tscn" id="1_g22o1"]
+
+[node name="Node2D" type="Node2D" unique_id=598074934]
+
+[node name="Enemy" parent="." unique_id=1117742302 instance=ExtResource("1_g22o1")]
+enemy_mode = 1
+fire_enabled = true
+patrol_radius = 100
+target_offset = Vector2(0, 0)
+max_health = 20
+speed = 250
+fire_interval = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=97521558]

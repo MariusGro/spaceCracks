@@ -12,11 +12,16 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause") and settings.visible == false:
 		set_pause(!get_tree().paused)
+		%Continue.grab_focus()
+	if Input.is_action_just_pressed("ui_cancel"):
+		if settings.visible:
+			toggle_settings_menu_visibility()
+		else:
+			set_pause(false)
 
 func set_pause(value: bool):
 	get_tree().paused = value
 	set_pause_menu_visibility(value)
-	
 
 func set_pause_menu_visibility(value: bool):
 	pause_title.visible = value
@@ -24,6 +29,10 @@ func set_pause_menu_visibility(value: bool):
 
 func toggle_settings_menu_visibility():
 	settings.visible = !settings.visible
+	if settings.visible:
+		settings.fullscreen_checkbox.grab_focus()
+	else:
+		%Continue.grab_focus()
 	pause_menu_panel.visible = !pause_menu_panel.visible
 
 func _on_continue_pressed() -> void:

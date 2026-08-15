@@ -153,6 +153,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="Start" type="Button" parent="MainMenuPanel/MarginContainer/MainMenuButtons" unique_id=1625888325]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Start Game"
